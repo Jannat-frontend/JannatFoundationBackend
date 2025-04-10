@@ -14,8 +14,10 @@ const paymentRoutes = require('./routes/paymentRoutes');
  
 const app = express();
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+  origin: 'https://jannatfoundationquiz.vercel.app', // your frontend Vercel domain
+  credentials: true
+}));
 
 
  
@@ -34,9 +36,9 @@ mongoose.connect(process.env.MONGO_URI)
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {console.log(`🚀 Server is running on port ${PORT}`);});
-
-
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Server is running on port ${PORT}`);
+});
 
 const leaderboardRoutes = require('./routes/leaderboardRoutes');
 app.use('/api/leaderboard', leaderboardRoutes);
