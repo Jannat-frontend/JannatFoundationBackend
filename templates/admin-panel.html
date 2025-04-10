@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel - Jannat Foundation Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Admin Panel</h1>
+  </header>
+
+  <main class="form-container">
+    <section>
+      <h2>Upload Quiz Questions</h2>
+      <form enctype="multipart/form-data">
+        <input type="file" name="questionsFile" accept=".csv" required />
+        <button type="submit" class="btn">Upload Questions</button>
+      </form>
+    </section>
+
+    <hr />
+
+    <section>
+      <h2>Candidate Leaderboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Score</th>
+            <th>UPI ID</th>
+            <th>Status</th>
+            <th>Update Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ahmed Khan</td>
+            <td>Delhi</td>
+            <td>5 / 5</td>
+            <td>ahmed@upi</td>
+            <td class="text-green">Paid</td>
+            <td><button class="btn-small">Mark Pending</button></td>
+          </tr>
+          <tr>
+            <td>Fatima Rizvi</td>
+            <td>Mumbai</td>
+            <td>3 / 5</td>
+            <td>fatima@upi</td>
+            <td class="text-orange">Pending</td>
+            <td><button class="btn-small">Mark Paid</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

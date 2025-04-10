@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - Jannat Foundation Quiz</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Register to Play Quiz</h1>
+  </header>
+
+  <main>
+    <form action="/register" method="POST" class="register-form">
+      <label>Full Name:</label>
+      <input type="text" name="fullName" required />
+
+      <label>City:</label>
+      <input type="text" name="city" required />
+
+      <label>Pin Code:</label>
+      <input type="text" name="pincode" required />
+
+      <label>Email:</label>
+      <input type="email" name="email" required />
+
+      <label>Mobile Number:</label>
+      <input type="tel" name="mobile" required />
+
+      <label>Password:</label>
+      <input type="password" name="password" required />
+
+      <button type="submit" class="button">Pay ₹20 & Start Quiz</button>
+    </form>
+  </main>
+</body>
+</html>
