@@ -1,4 +1,3 @@
-// models/User.js
 const mongoose = require('mongoose');
 
 const userSchema = new mongoose.Schema({
@@ -9,7 +8,8 @@ const userSchema = new mongoose.Schema({
   mobile: String,
   password: String,
   score: Number,
-  status: String
+  status: String,
 });
 
-module.exports = mongoose.model('User', userSchema);
+// Prevent OverwriteModelError
+module.exports = mongoose.models.User || mongoose.model('User', userSchema);
