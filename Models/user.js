@@ -12,4 +12,4 @@ const userSchema = new mongoose.Schema({
 });
 
 // Prevent OverwriteModelError
-module.exports = mongoose.models.User || mongoose.model('User', userSchema);
+module.exports = mongoose.models.user || mongoose.model('user', userSchema);
