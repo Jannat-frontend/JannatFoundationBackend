@@ -2,7 +2,7 @@ const express = require('express');
 const Razorpay = require('razorpay');
 const router = express.Router();
 const Payment = require('../models/Payment'); // New model
-const User = require("../models/user");
+const user = require("../models/user");
 
 require('dotenv').config();
 
